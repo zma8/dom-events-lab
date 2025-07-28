@@ -1,12 +1,7 @@
-/*-------------------------------- Constants --------------------------------*/
 
-/*-------------------------------- Variables --------------------------------*/
 
-/*------------------------ Cached Element References ------------------------*/
 
-/*----------------------------- Event Listeners -----------------------------*/
 
-/*-------------------------------- Functions --------------------------------*/
 
 // const buttons = document.querySelectorAll('.button');
 // buttons.forEach((button) => {
@@ -16,25 +11,30 @@
    
 //   });
 // });
+/*------------------------ Cached Element References ------------------------*/
 
 const calculator = document.querySelector('#calculator');
 const display=document.querySelector('.display');
+/*-------------------------------- Variables --------------------------------*/
+
 let num1='';
 let num2='';
 let operation=null;
+/*----------------------------- Event Listeners -----------------------------*/
 
 calculator.addEventListener('click', (event) => {
-  
+/*-------------------------------- Constants --------------------------------*/
+
 //   console.log(event.target.innerText);
 const target=event.target;
 const value=target.innerText;
+/*-------------------------------- Functions --------------------------------*/
+
   if (target.classList.contains('number')) {
       num1+=value;
      display.textContent=num1;
-
   }
 
-  // Example
   else if (value === '+') {
     num2=num1;
     operation='+';
@@ -62,36 +62,24 @@ const value=target.innerText;
   else if (value==='='){
     if(operation==='+'){
         const result =num2+num1;
-        display.textContent=result;
-
-        num1='';
-        num2='';
-        operation=null;
     }
+
     else if(operation==='-'){
         const result =num2-num1;
-        display.textContent=result;
-
-        num1='';
-        num2='';
-        operation=null;
     }
+
     else if(operation==='*'){
         const result =num2*num1;
-        display.textContent=result;
-
-        num1='';
-        num2='';
-        operation=null;
     }
+
     else if(operation==='/'){
         const result =(num2)/(num1);
-        display.textContent=result;
+    }
 
+      display.textContent=result;
         num1='';
         num2='';
         operation=null;
-    }
   }
   else if (value === 'C') {
     num1 = '';
