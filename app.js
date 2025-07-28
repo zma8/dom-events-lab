@@ -54,6 +54,7 @@ const value=target.innerText;
 
   }
   else if (value === '/') {
+    
     num2=num1;
     operation='/';
     num1='';
@@ -74,7 +75,11 @@ const value=target.innerText;
     }
 
     else if(operation==='/'){
-         result =(num2)/(num1);
+        if(num1==='0'){
+            result=0;
+        }else{
+      result=num2/num1;}
+       
     }
 
       display.textContent=result;
