@@ -35,25 +35,25 @@ const value=target.innerText;
   }
 
   // Example
-  else if (event.target.innerText === '+') {
+  else if (value === '+') {
     num2=num1;
     operation='+';
     num1='';
 
   }
-  else if (event.target.innerText === '-') {
+  else if (value === '-') {
     num2=num1;
     operation='-';
     num1='';
 
   }
-  else if (event.target.innerText === '*') {
+  else if (value === '*') {
     num2=num1;
     operation='*';
     num1='';
 
   }
-  else if (event.target.innerText === '/') {
+  else if (value === '/') {
     num2=num1;
     operation='/';
     num1='';
