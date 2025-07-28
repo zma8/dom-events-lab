@@ -28,7 +28,7 @@ calculator.addEventListener('click', (event) => {
 //   console.log(event.target.innerText);
 const target=event.target;
 const value=target.innerText;
-  if (event.target.classList.contains('number')) {
+  if (target.classList.contains('number')) {
       num1+=value;
      display.textContent=num1;
 
@@ -61,7 +61,7 @@ const value=target.innerText;
   }
   else if (value==='='){
     if(operation==='+'){
-        const result =parseInt(num2)+parseInt(num1);
+        const result =num2+num1;
         display.textContent=result;
 
         num1='';
@@ -69,7 +69,7 @@ const value=target.innerText;
         operation=null;
     }
     else if(operation==='-'){
-        const result =parseInt(num2)-parseInt(num1);
+        const result =num2-num1;
         display.textContent=result;
 
         num1='';
@@ -77,7 +77,7 @@ const value=target.innerText;
         operation=null;
     }
     else if(operation==='*'){
-        const result =parseInt(num2)*parseInt(num1);
+        const result =num2*num1;
         display.textContent=result;
 
         num1='';
@@ -85,7 +85,7 @@ const value=target.innerText;
         operation=null;
     }
     else if(operation==='/'){
-        const result =parseInt(num2)/parseInt(num1);
+        const result =(num2)/(num1);
         display.textContent=result;
 
         num1='';
