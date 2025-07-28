@@ -60,20 +60,21 @@ const value=target.innerText;
 
   }
   else if (value==='='){
+    let result;
     if(operation==='+'){
-        const result =num2+num1;
+         result =num2+num1;
     }
 
     else if(operation==='-'){
-        const result =num2-num1;
+         result =num2-num1;
     }
 
     else if(operation==='*'){
-        const result =num2*num1;
+         result =num2*num1;
     }
 
     else if(operation==='/'){
-        const result =(num2)/(num1);
+         result =(num2)/(num1);
     }
 
       display.textContent=result;
