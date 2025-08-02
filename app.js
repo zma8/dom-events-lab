@@ -63,7 +63,7 @@ const value=target.innerText;
   else if (value==='='){
     let result;
     if(operation==='+'){
-         result =num2+num1;
+       result =parseInt(num2)+parseInt(num1);
     }
 
     else if(operation==='-'){
@@ -94,4 +94,3 @@ const value=target.innerText;
     display.textContent = 0;
   }
 });
-
